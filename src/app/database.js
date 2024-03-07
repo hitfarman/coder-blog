@@ -21,9 +21,9 @@ connectionPool.getConnection((err, connection) =>{
   // 2.获取connection,尝试和数据库建立连接
   connection.connect((err) => {
     if (err) {
-      console.log('和数据库交互失败', err)
+      console.log('database failed!', err)
     } else {
-      console.log('数据库连接成功!')
+      console.log('database connected!')
     }
   })
 })

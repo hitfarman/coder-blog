@@ -1,5 +1,3 @@
-
-
 const connection = require('../app/database')
 
 class UserService {
@@ -19,6 +17,12 @@ class UserService {
     const ps = 'SELECT * FROM user WHERE name = ?'
     const [values] = await connection.execute(ps, [name])
     return values
+  }
+
+  async updateUserAvatar(avatarUrl, userId) {
+    const ps = 'UPDATE user SET avatar_url = ? WHERE id = ?'
+    const [ result ] = await connection.execute(ps, [avatarUrl, userId])
+    return result
   }
 }
 

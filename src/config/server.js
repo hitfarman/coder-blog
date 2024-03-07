@@ -7,5 +7,6 @@ dotenv.config()
 // const SERVER_PORT = 8000
 
 module.exports = {
-  SERVER_PORT
+  SERVER_PORT,
+  SERVER_HOST
 } = process.env
